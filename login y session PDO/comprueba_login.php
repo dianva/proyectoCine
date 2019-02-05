@@ -16,7 +16,7 @@
             session_start(); //iniciar sesion para el usuario logueado
             $_SESSION["usuario"]=$_POST["nif"];//variable super global para el usuario y lo podemos utilizar en cualquier otra pagina del sitio
    
-            header("Location:main/bienvenida.php"); //redireccionamos a la pagina de bienvenida
+            header("Location:main/bienvenida.php"); //redireccionamos a la pagina de bienvenidall
         }else{ //si el usuario no existe
             //le hago volver a la pagina de nif
             echo "No existe";
