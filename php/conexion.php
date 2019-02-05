@@ -25,8 +25,6 @@ class Conexion{
     public function __clone() {
 		trigger_error('Clonación no permitida', E_USER_ERROR);
     }
-}
-
 
 
 
