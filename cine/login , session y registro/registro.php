@@ -29,7 +29,7 @@
 				<input type="submit" name="registro" value="Registrarse" />
 			</div>
 		</form>	
-		<h3><a href="../index.php">Volver al inicio</a></h3>
+		<h3><a href="../index.html">Volver al inicio</a></h3>
 	</div>
 
 	<?php
