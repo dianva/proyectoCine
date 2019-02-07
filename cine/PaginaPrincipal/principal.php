@@ -12,16 +12,22 @@ session_start(); //iniciar sesion para el usuario logueado
 //$_SESSION["usuario"]=$_REQUEST['dni'];//variable super global para el usuario y lo podemos utilizar en cualquier otra pagina del sitio
 //$nombreUsu=metodo que devuelve el  nombre de usuario
 
-$_SESSION["usuario"]="123456789A";//dni para probar la sesion
+$_SESSION["usuario"]=$_REQUEST['dni'];//dni para probar la sesion
 echo '<nav>
 <div><a href="./principal.php?menu=verPeli">ver Películas</a></div>
 <div><a href="./principal.php?menu=verEntradas">ver Entradas</a></div>
 <div><a href="./principal.php?menu=saldo">Recargar saldo</a></div>
 <div><a href="./modificar_usu.php">Usuario :'.$_SESSION["usuario"].'</a>
-     <a href="./cerrar_sesion.php">salir</a></div>
+     <a href="../login , session y registro/cerrar_sesion.php">salir</a></div>
 </nav>
 ';
 
+
+include("../funciones y objetos/usuario.php");
+include("../funciones y objetos/pelicula.php");
+include("../funciones y objetos/entrada.php");
+include("../funciones y objetos/sala.php");
+include("../Conexion/conexion.php");
 if(isset($_REQUEST['menu'])){
     switch($_REQUEST['menu']){
         case "verPeli":
