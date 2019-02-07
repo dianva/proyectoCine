@@ -34,8 +34,17 @@
 
 	<?php
 	if ( isset($_POST['registro']) ) {
+		$errores=0;
+		$erroresDescripcion=[];
+		$dni=$_POST["nif"];
+
+		//funcciones para validar pendiente
+
+	
 		// Si los campos obligatorios han sido cumplimentados
+		
 		 if ( !empty($_POST['nif']) && !empty($_POST['pas']) && !empty($_POST['nombre']) && !empty($_POST['nombre'])) {
+			if($errores==0){
 				$nif=$_POST["nif"];
 				$pas=$_POST["pas"];
 				$nombre=$_POST["nombre"];
@@ -55,9 +64,17 @@
 					$base=null;
 				}
 		 } else {
+			 //mostar errores
+			 echo "<p>Se han cometido $errores errores: </p>";
+			 foreach ($erroresDescripcion as $valor) {
+				echo "<p>- $erroresDescripcion  </p>";
+			}
+			
+		 }
+		}else{
 			 // campo obligatorio sin rellenar
 			 echo "<p>Hay campos vacios por rellenar</p>";
-		 }			
+		}			
 	}
 	/********************/
 
