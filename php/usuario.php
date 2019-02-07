@@ -1,10 +1,11 @@
 <?php
 
 class Usuario{
-    public static $nif;
-    public static $password;
-    public static $email;
-    public static $saldo;
+    private static $nif;
+    private static $password;
+    private static $email;
+    private static $saldo;
+    private static $db;
 
     public static __construct($nif, $password, $email, $saldo){
         $this->db = Conexion::conexion_instancia(); 
