@@ -18,7 +18,7 @@ echo '<nav>
 <div><a href="./principal.php?menu=verEntradas">ver Entradas</a></div>
 <div><a href="./principal.php?menu=saldo">Recargar saldo</a></div>
 <div><a href="./modificar_usu.php">Usuario :'.$_SESSION["usuario"].'</a>
-     <a href="./cerrar_sesion.php">salir</a></div>
+     <a href="../login, session y regitro/cerrar_sesion.php">salir</a></div>
 </nav>
 ';
 
