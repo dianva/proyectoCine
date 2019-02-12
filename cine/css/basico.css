@@ -40,3 +40,7 @@ div:hover{
     font-weight: bolder;
     cursor:grab;
     }
+
+    form{
+        margin-top: 10vw;
+    }

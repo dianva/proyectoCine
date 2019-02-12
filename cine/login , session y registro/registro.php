@@ -31,9 +31,8 @@
             <div>
 				<input class="loginRegistro" type="submit" name="registro" value="Registrarse" />
 			</div>
-			
+			<div><h3><a class="loginRegistro"  href="../index.html">Volver al inicio</a></h3></div>
 		</form>	
-		<div><h3><a class="loginRegistro"  href="../index.html">Volver al inicio</a></h3></div>
 		</div>
 
 	<?php
