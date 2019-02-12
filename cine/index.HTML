@@ -1,31 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-	<meta charset="utf-8" />
-	<title>Login</title>
-	<link rel="stylesheet" href="css/index.css" type="text/css" />
-</head>
+	<head>
+		<meta charset="utf-8" />
+		<title>Login</title>
+		<link rel="stylesheet" href="css/index.css" type="text/css" />
+		<link rel="stylesheet" href="css/basico.css" type="text/css" />
+	</head>
 
-<body>
-	
-		<form method="post"  action="login , session y registro/comprueba_login.php">
-			<div id="formulario">
-			<div>
-                <label name= "nif">NIF</label>
-                <input name="nif" type="text" />
-	        </div>
-            <div>
-                <label name= "password">Contraseña</label>
-                <input name="password" type="password" />
-	        </div>
-            <div>
-				<input type="submit" name="login"  value="Login" />
-			</div>
-		</div>
+	<body>
+
+		<form method="post" action="login , session y registro/comprueba_login.php">
+			<div class="formulario">
+
+				<div><label name="nif">NIF</label><input name="nif" type="text" /></div>
+				<div><label name="password">PASS</label><input name="password" type="password" /></div>
+				<div><input class="login" type="submit" name="login" value="LOGIN" /></div>
+			
 		</form>
-		<h3><a href="login , session y registro/registro.php">Regístrate aquí</a></h3>
+		<div><h3><a class="login" href="login , session y registro/registro.php">Regístrate aquí</a></h3>
+		</div>
+		</div>
+	</body>
 	
-
-
-</body>
 </html>
