@@ -2,7 +2,9 @@
     margin: 0;
     padding: 0;
 }
-
+body{
+    height: 100vh;
+}
 body{
     background: rgb(156, 214, 236);
     color: black;

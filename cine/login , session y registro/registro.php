@@ -4,9 +4,11 @@
 	<meta charset="UTF-8">
 	<title>Registro</title>
 	<link rel="stylesheet" href="" type="text/css" />
+	<link rel="stylesheet" href="css/basico.css" type="text/css" />
+	<link rel="stylesheet" href="css/registro.css" type="text/css" />
 </head>
 <body>
-	<div id="formulario">
+	<div id="registro">
 		<form method="post" action="#" enctype="multipart/form-data">
 			<div>
                 <label name= "nif">* DNI</label>
