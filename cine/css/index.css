@@ -1,0 +1,12 @@
+.formulario{
+    width: 80%;
+    max-width: 1000px;
+    border: solid black 15px;
+}
+.formulario>div{
+    display: block;
+    padding: 20px;
+    background: blue;
+    box-shadow: 2px 2px 10px black;
+    
+}
