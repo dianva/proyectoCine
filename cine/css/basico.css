@@ -13,3 +13,30 @@ body{
 p{
     text-align: center;
 }
+a{
+    text-decoration: none;
+}
+div div{
+    background: rgb(88, 199, 233);
+    text-align: center;
+    padding: 20px;
+    color: white;
+    box-shadow: 2px 2px 80px blue;
+    border-radius: 15px;
+    
+}
+div:hover{
+    transform: scale(1);
+
+}
+
+.loginRegistro{
+    font-size: 50px;
+    background:none;
+    border:none;
+}
+
+.loginRegistro:hover{
+    font-weight: bolder;
+    cursor:grab;
+    }

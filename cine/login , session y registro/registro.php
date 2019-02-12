@@ -4,12 +4,13 @@
 	<meta charset="UTF-8">
 	<title>Registro</title>
 	<link rel="stylesheet" href="" type="text/css" />
-	<link rel="stylesheet" href="css/basico.css" type="text/css" />
-	<link rel="stylesheet" href="css/registro.css" type="text/css" />
+	<link rel="stylesheet" href="../css/basico.css" type="text/css" />
+	<link rel="stylesheet" href="../css/registro.css" type="text/css" />
 </head>
 <body>
-	<div id="registro">
+
 		<form method="post" action="#" enctype="multipart/form-data">
+		<div class="registro">
 			<div>
                 <label name= "nif">* DNI</label>
                 <input name="nif" type="text" />
@@ -28,11 +29,12 @@
                 <input name="email" type="text" />
 	        </div>   
             <div>
-				<input type="submit" name="registro" value="Registrarse" />
+				<input class="loginRegistro" type="submit" name="registro" value="Registrarse" />
 			</div>
+			
 		</form>	
-		<h3><a href="../index.html">Volver al inicio</a></h3>
-	</div>
+		<div><h3><a class="loginRegistro"  href="../index.html">Volver al inicio</a></h3></div>
+		</div>
 
 	<?php
 	if ( isset($_POST['registro']) ) {
