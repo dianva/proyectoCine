@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="../css/registro.css" type="text/css" />
 </head>
 <body>
-
+<h1>PAGINA DE REGISTRO</h1>
 		<form method="post" action="#" enctype="multipart/form-data">
 		<div class="registro">
 			<div>
@@ -26,64 +26,24 @@
 			     
 	        <div>
                 <label name= "email">&nbsp;* Email</label>
-                <input name="email" type="text" />
-	        </div>   
-            <div>
-				<input class="loginRegistro" type="submit" name="registro" value="Registrarse" />
-			</div>
+				<input name="email" type="text" />
+				
+			</div> 
+			<div calss="datos">
+			<input class="loginRegistro" type="submit" name="registro" value="Registrarse" /><br/>
+			<input class="loginRegistro" type="submit" name="guardar" value="Guardar datos (dni.txt)"><br/>
+		</div>  
+		<div>
+		<label>Registro desde fichero(dni.txt): </label><input type="text" name="cargar" id="">
+		<input type="submit" value="OK!">
+		</div>
+           
 			<div><h3><a class="loginRegistro"  href="../index.html">Volver al inicio</a></h3></div>
 		</form>	
 		</div>
-
 	<?php
-	if ( isset($_POST['registro']) ) {
-		$errores=0;
-		$erroresDescripcion=[];
-		$dni=$_POST["nif"];
-
-		//funcciones para validar pendiente
-
-	
-		// Si los campos obligatorios han sido cumplimentados
-		
-		 if ( !empty($_POST['nif']) && !empty($_POST['pas']) && !empty($_POST['nombre']) && !empty($_POST['nombre'])) {
-			if($errores==0){
-				$nif=$_POST["nif"];
-				$pas=$_POST["pas"];
-				$nombre=$_POST["nombre"];
-				$email=$_POST["email"];
-				try{
-				$base=new PDO('mysql:host=localhost;dbname=cine','root','');
-				$base-> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-				$base->exec("SET CHARACTER SET UTF8");
-				$sql="INSERT INTO usuario (nif, password, nombre, email, saldo) VALUES
-				('$nif','$pas','$nombre','$email', 0)";
-				$resultado=$base->prepare($sql);
-				$resultado->execute();
-				echo "Registro insertado";
-				}catch(Exception $e){
-					die('Error:'. $e->getMessage());
-				}finally{
-					$base=null;
-				}
-		 } else {
-			 //mostar errores
-			 echo "<p>Se han cometido $errores errores: </p>";
-			 foreach ($erroresDescripcion as $valor) {
-				echo "<p>- $erroresDescripcion  </p>";
-			}
-			
-		 }
-		}else{
-			 // campo obligatorio sin rellenar
-			 echo "<p>Hay campos vacios por rellenar</p>";
-		}			
-	}
-	/********************/
-
-    ?>
+include("../funciones y objetos/funccionesRegistro.php");
+?>
    
-
-    
 </body>
 </html>
