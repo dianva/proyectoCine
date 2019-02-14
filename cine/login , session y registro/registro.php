@@ -34,8 +34,10 @@
 			<input class="loginRegistro" type="submit" name="guardar" value="Guardar datos (dni.txt)"><br/>
 		</div>  
 		<div>
-		<label>Registro desde fichero(dni.txt): </label><input type="text" name="cargar" id="">
-		<input type="submit" value="OK!">
+		<form action="" method="post">
+		<label>Registro desde fichero(dni.txt): </label><input type="text" name="fichero" id="">
+		<input type="submit" name="cargar" value="OK!">
+		</form>
 		</div>
            
 			<div><h3><a class="loginRegistro"  href="../index.html">Volver al inicio</a></h3></div>
