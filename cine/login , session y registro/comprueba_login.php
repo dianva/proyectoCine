@@ -18,7 +18,7 @@
             header("Location:../PaginaPrincipal/principal.php"); //redireccionamos a la pagina de bienvenida
         }else{ //si el usuario no existe
             //le hago volver a la pagina de nif
-            echo "No existe";
+            header("Location:loginFallido.php"); 
         }
     }catch(Exception $e){
         die("Error:". $e->getMessage());

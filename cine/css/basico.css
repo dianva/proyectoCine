@@ -57,7 +57,7 @@ div:hover{
     }
 
     input[type=text],input[type=password]{
-        width: 20vw;
+     
         font-size: 0.5em;
         position: relative;
         top: -0.2em;
