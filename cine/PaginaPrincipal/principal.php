@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">    
+    <link rel="stylesheet" href="../css/principal.css" type="text/css"/>
+   
+    
     <title>principal</title>
     <style>
-    td>img{
-        width:50px;
-    }
+    
     </style>
 </head>
 <body>
@@ -19,8 +20,8 @@ echo '<nav>
 <div><a href="./principal.php?menu=verPeli">ver Películas</a></div>
 <div><a href="./principal.php?menu=verEntradas">ver Entradas</a></div>
 <div><a href="./principal.php?menu=saldo">Recargar saldo</a></div>
-<div><a href="./principal.php?menu=modUsu">Usuario :'.$_SESSION["usuario"].'</a>
-     <a href="../login , session y registro/cerrar_sesion.php">salir</a></div>
+<div><a href="./principal.php?menu=modUsu">Usuario :'.$_SESSION["usuario"].'</a></div>
+<div><a href="../login , session y registro/cerrar_sesion.php">salir</a></div>
 </nav>
 ';
 include("../funciones y objetos/usuario.php");

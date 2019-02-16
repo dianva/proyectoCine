@@ -1,30 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+}
+body{
+    background: rgb(165, 187, 195);
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+p{
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    padding: 1em;
+    font-size: 1.5em;
+    color: midnightblue;
+}
+div div{
+    background: rgb(88, 199, 233);
+    text-align: center;
+    padding: 20px;
+    color: white;
+    box-shadow: 2px 2px 80px blue;
+    border-radius: 15px;
+    
+}
+
+p>a{
+    background-color: rgb(218, 67, 67);
+    color: white;
+    padding: 1em;
+    border-radius: 30px;
+}
+div:hover{
+    transform: scale(1);
+}
+
 nav{
     
     display:flex;
-    flex-direction: row wrap;
-    background:lightblue;
+    flex-direction:row;    
     justify-content: center;
     padding:20px;
+    margin:2em;
+   
 }
 nav div{
-    flex:0 0 20%;
-    text-align: center;
+    flex: 0 0 20%;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 2px solid black;
+    line-height: 40px
 }
 
-nav:hover{
+nav > div:hover{
    
     background-color: lightgray;
     color:white;
+    transform: scale(1); 
    
 }
+
+nav > div:nth-child(5){
+    flex: 0 0 20%;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;   
+}
+
 nav div a{
     display:block;
+    
 }
 
 img{
-    width:70%;
+    width:50%;
    
 }
+
 
 #cartelera{
     display:grid;
@@ -35,3 +93,56 @@ img{
 .sala > *{
     padding:20px;
 }
+
+#cartelera > div h2{
+    
+        position: relative;
+        top: 0;
+        font-size: 1.5em;
+        /* right: 50%; */
+        /* border: solid red 10px; */
+        font-size: bolder;
+        color: white;
+        padding: 1em;
+  
+}
+
+
+
+@media (min-width:600px) and (max-width:1000px){
+    #cartelera{
+        grid-template-columns: repeat(2, 1fr)
+    }
+}
+
+@media (max-width:600px){
+    nav{    
+        
+        flex-direction:column;  
+        justify-content: center;
+         
+    }
+
+    nav > div{
+        margin:2%;
+    }
+
+    #cartelera{
+        grid-template-columns: minmax(300px, 1fr);
+       
+    }
+
+    nav div{        
+        border-bottom: 2px solid black;
+        border-right: none;
+        margin:0;
+       
+    }nav > div:nth-child(5){
+        border-bottom: 2px solid black;
+        border-right: none;
+        margin:0;
+    }
+
+
+}
+
