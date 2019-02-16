@@ -64,10 +64,12 @@ echo "<div class='fichaUsuario'>
 <p>Saldo  : ". $regto['saldo']."€</p>
 <form action='./principal.php' method='post'>
 <h2>Si desea añadir saldo a su cuenta añádalo desde aquí</h2>
-    <p><input type='number' name='saldoMas'></p>
-    <input type='hidden' name='saldo' value='".$regto['saldo']."'>
-    <input type='hidden' name='menu' value='saldo'>
-    <button type='submit'>Añadir Saldo a la cuenta</button>
+<ul>
+    <li><input type='number' name='saldoMas'></li>
+    <li><input type='hidden' name='saldo' value='".$regto['saldo']."'></li>
+    <li><input type='hidden' name='menu' value='saldo'></li>
+    <li> <button type='submit'>Añadir Saldo a la cuenta</button></li>
+</ul>
 </form>
 <div>";
 

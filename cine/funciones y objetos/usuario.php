@@ -26,15 +26,23 @@ $consulta="select * from usuario where nif like '$dni' ;";
 
 echo "<div class='fichaUsuario'>
 <form action='./principal.php' method='post'>
-<p>DNI    : ". $dni."</p>
-<p>Nombre : <input type='text' name='nombre' value='". $regto['nombre']."'></p>
-<p>Email  : <input type='text' name='email' value='". $regto['email']."'></p>
-<p>Saldo  : ". $regto['saldo']."€</p>
-<p>Nuevo Password : <input type='text' name='pass1' value=''></p>
-<p>repite Password : <input type='text' name='pass2' value=''></p>
-    <input type='hidden' name='menu' value='modUsu'>
-    <input type='hidden' name='mod' value='si'>
-    <button type='submit'>modificar usuario</button>
+<ul>
+<fieldset>
+    <legend>DNI    : ". $dni."</legend>
+    <li>Nombre :</li> 
+    <li><input type='text' name='nombre' value='". $regto['nombre']."'></li>
+    <li>Email  : </li>
+    <li><input type='text' name='email' value='". $regto['email']."'></li>
+    <li>Saldo  : ". $regto['saldo']."€</li>
+    <li>Nuevo Password :</li> 
+    <li><input type='text' name='pass1' value=''></li>
+    <li>repite Password :</li> 
+    <input type='text' name='pass2' value=''></li>
+        <input type='hidden' name='menu' value='modUsu'>
+        <input type='hidden' name='mod' value='si'>
+        <li><button type='submit'>Modificar usuario</button></li>
+</fieldset>
+</ul>
 </form>
 <div>";
 

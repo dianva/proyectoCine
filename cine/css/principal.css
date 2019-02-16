@@ -2,6 +2,12 @@
     margin: 0;
     padding: 0;
 }
+
+ul{
+    list-style: none;
+}
+
+
 body{
     height: 100vh;
 }
@@ -107,9 +113,62 @@ img{
   
 }
 
+.entrada{
+    background: url("../Carteles/tickt.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    box-shadow: none;
+    margin: 0.5em;
+
+}
+
+.entradasUsuario > h2{
+    text-align: center;
+}
+
+.entrada{
+    margin:1.5em;
+}
+
+.entrada:hover{
+    transform: rotate(-5deg)
+}
+.fichaUsuario{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+fieldset{
+    padding: 1em;
+}
+
+fieldset>li{
+    padding-top:1em;
+}
+
+input[type="text"]{
+    height: 2em;
+}
+
+button{
+    height: 2em;
+    width: 170px;
+    text-transform: uppercase;
+    border-radius: 2px;
+}
+button:hover{
+    background-color: blue;
+    color:white;
+    text-transform: uppercase;
+    border-radius: 2px;
+}
 
 
-@media (min-width:600px) and (max-width:1000px){
+
+@media (min-width:600px) and (max-width:1400px){
     #cartelera{
         grid-template-columns: repeat(2, 1fr)
     }
