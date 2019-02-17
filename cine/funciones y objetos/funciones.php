@@ -1,5 +1,6 @@
 <?php
-
+//funcion auxiliar que muestra el formulario para seleccionar un dia y una hora
+//esta función se hizo a parte con la idea de poder ampliar la funcionalidad y dejar que se pudieran elegir dias y horas reales .
 function mostrarDiaHora(){
     echo "<h2>Seleccion Día y Hora</h2>";
     echo "
