@@ -16,7 +16,7 @@ class usuario{
        }
     }
 
-
+//devuelve el nombre de la persona a la que conrresponde el dni pasado como parametro
 public function darNombre($dni){
 $consulta="select * from usuario where nif like '$dni' ;";
     try{
@@ -34,6 +34,7 @@ for ($i=0; $i < $cont; $i++) {
 }
 }
 
+//devuelve el saldo de la persona que se paso como parametro
 public function darSaldo($dni){
     $consulta="select * from usuario where nif like '$dni' ;";
     try{
@@ -50,6 +51,8 @@ for ($i=0; $i < $cont; $i++) {
 
 }
 }
+
+//muestra el formulario para agregar más saldo a una determinada peronsa q ese ha pasado como parametro
 public function formuAgregarSaldo($dni){
     $consulta="select * from usuario WHERE nif like '$dni';";
     try{
@@ -81,6 +84,8 @@ echo "<div class='fichaUsuario'>
 
 
 }
+//modifica el saldo de la persona pasada como parametro por el saldo que se ha pasado por parametro
+
 public function modificarSaldo($dni, $saldo){
     $consulta="UPDATE usuario SET saldo=$saldo WHERE nif like '$dni';";
     try{

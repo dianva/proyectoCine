@@ -14,7 +14,7 @@ class entrada{
            printf ("<h3 style='color:red'>Error al conectar la Base de Datos: %s </h3>", $e->getMessage());
        }
     }
-  
+      //funcion que comprueba las butacas ocupadas de una determianda sala , a una determinada hora y determinado dia.
    public function ComprobarEntradasSala($sala ,$dia, $hora){
 
     $consulta="select * from  entrada where dia like '$dia' and hora like '$hora' and numSala like '$sala'";
@@ -24,7 +24,8 @@ class entrada{
     $resultados->execute();
     $cont=$resultados->rowCount();
         
-for ($i=0; $i < $cont; $i++) {
+for ($i=0; $i < $cont; $i++) {//cada butaca ocupada la añadimos al array 
+    
     $regto=$resultados->fetch(PDO::FETCH_ASSOC);
     $butacasOcupadas[$i]=   $regto['numButaca']; 
 }
@@ -32,9 +33,11 @@ for ($i=0; $i < $cont; $i++) {
         echo "<p>Consulta ejecutada: " .$consulta. "</p>";
         echo "<p class='error'>Descripción del error: " .$e->getMessage(). "</p>";
 
-}
+}//la funcion devuelve un array con el nº de cada butaca ocupada.
+
 return $butacasOcupadas;
    }
+   //funcion que compra una entrada de una sala, hora dia y el cliente que la compra
 
    public function comprarEntrada($numSala, $numButaca ,$dia, $hora, $dni_cliente ){
     $consulta="INSERT INTO `entrada`(`numButaca`, `dia`, `hora`, `numSala`, `dni_cliente`) VALUES ($numButaca,'$dia', '$hora',$numSala,'$dni_cliente');";
@@ -48,7 +51,8 @@ return $butacasOcupadas;
 
 }
    }
-  
+    //funcion para calcular el precio de la entrada dependiendo del tipo de sala que sea, (normal , vip, atmos...)
+ 
 public function calcularPrecio($tipo, $numButacas){
 $precio=0;
     switch($tipo){
@@ -66,12 +70,12 @@ $precio=6;
 break;
 }
 $precio=$numButacas*$precio;
-
+// devuelve el precio total.
 return $precio;
 
 }
 
-public function mostrarEntradas($dni){
+public function mostrarEntradas($dni){//muestra las entradas compradas del usuario pasado como parametro
 $consulta="select * from entrada where dni_cliente like '".$dni."' ORDER by dia , hora;";
 try{
     $resultados=$this->conex->prepare($consulta);
