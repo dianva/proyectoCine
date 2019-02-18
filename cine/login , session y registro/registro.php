@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="../css/registro.css" type="text/css" />
 </head>
 <body>
-<h1>PAGINA DE REGISTRO</h1>
+<h1>Página de registro</h1>
 		<form method="post" action="#" enctype="multipart/form-data">
 		<div class="registro">
 			<div>
@@ -29,7 +29,7 @@
 				<input name="email" type="text" />
 				
 			</div> 
-			<div calss="datos">
+			<div class="datos">
 			<input class="loginRegistro" type="submit" name="registro" value="Registrarse" /><br/>
 			<input class="loginRegistro" type="submit" name="guardar" value="Guardar datos (dni.txt)"><br/>
 		</div>  

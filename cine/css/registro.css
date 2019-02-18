@@ -19,6 +19,29 @@
 .datos{
 display: flex;
 flex-direction: column;
-text-align: left;
+justify-content: center;
+}
+
+form > div > div:nth-child(6){
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;   
+
+}
+
+form > div > div:nth-child(6) > input[type='submit']{
+    width:20%;
+    height: 50%;
+    border-radius:3%
+}
+
+
+.registro > div:nth-child(7) > h3{
+    text-align: center;
+}
+
+form > div > div:nth-child(6) > label{
+    padding:0.5em;
 }
 
