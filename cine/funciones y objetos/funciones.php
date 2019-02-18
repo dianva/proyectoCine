@@ -4,7 +4,7 @@
 function mostrarDiaHora(){
     echo "<h2>Seleccion Día y Hora</h2>";
     echo "
-    <form action='#' method='post'>
+    <form class='seleccionPase' action='#' method='post'>
     <select name='dia' >
     <option value='no'>Selecciona Dia</option>
     <option value='2019-02-10'>Hoy</option>
