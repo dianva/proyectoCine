@@ -19,7 +19,7 @@
             <div>	<input class="loginRegistro" type="submit" name="recordarPass" value="Recordar contraseña" /><br/></div>  
             <div><h3><a class="loginRegistro"  href="../index.html">Volver al inicio</a></h3></div>
 		</form>
-           
+</div> 
 	<?php
 include("../funciones y objetos/usuario.php");
 
