@@ -61,7 +61,7 @@ class sala{
     public function verButacas($numbutacas, $ocupadas, $sala, $dia, $hora){ 
                  $ocu=false;
                  echo '<form class="butacas" action="./principal.php" method="post">
-                <h1>PANTALLA</h1>
+               
                  <table><tr>';
 //las butacas se colocaran en una tabla de 10 butacas por fila
 
@@ -87,11 +87,12 @@ class sala{
                 $ocu=false;
             }
  echo '</tr></table>
+ <h1>PANTALLA</h1>
  <input type="hidden" name="dia" value="'.$dia.'">
  <input type="hidden" name="hora" value="'.$hora.'">
  <p><button type="submit" name="comprarButacas" value="'.$sala.'">Comprar</button></p>            
  </form>
- <p><a href="./principal.php">VOLVER</a></p>
+ <p id="volver"><a href="./principal.php?menu=verPeli">VOLVER</a><p>
  ';
 }
 //nos devuelve el tipo de sala que es la sala pasada como parametro , si es vip , normal , atmos...
