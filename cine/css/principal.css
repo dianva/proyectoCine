@@ -278,6 +278,11 @@ input[type="checkbox"]{
     opacity: 0;
 }
 
+input[type='checkbox']:checked ~ label > img{
+    border: 5px solid green;
+    border-radius: 50%;
+}
+
 form.butacas td > label > img{
     border-radius: 50%;
     border: 1px solid rgb(156, 214, 236);
