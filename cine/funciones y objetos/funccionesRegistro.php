@@ -16,7 +16,7 @@ if (isset($_POST['registro'])) {
 			$nombre = $_POST["nombre"];
 			$email = $_POST["email"];
 			try {
-				$base = new PDO('mysql:host=localhost;dbname=cine', 'root', '');
+				$base = new PDO('mysql:host=localhost;dbname=cine', 'daw', 'galileo');
 				$base->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 				$base->exec("SET CHARACTER SET UTF8");
 				$sql = "INSERT INTO usuario (nif, password, nombre, email, saldo) VALUES

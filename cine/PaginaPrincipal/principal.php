@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">    
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">  
+   
     <link rel="stylesheet" href="../css/principal.css" type="text/css"/>
+    
    
     
     <title>principal</title>
@@ -33,8 +35,8 @@ echo '<nav>
 //si puldamos cualquier opcion del menu entraremos en un switch donde dependiendo de la opcion pulsada realizara una funcion u otra.
 
 if(isset($_REQUEST['menu'])){
-    switch($_REQUEST['menu']){
-    switch($_REQUEST['menu']//al pulsar sobre ver peliculas){
+   
+    switch($_REQUEST['menu']){//al pulsar sobre ver peliculas){
         case "verPeli":
         $salas=new sala();
         if(isset($_REQUEST['numSala'])){//primero comprobaremos si hemos seleccionado un sala
@@ -61,7 +63,7 @@ if(isset($_REQUEST['menu'])){
         if(isset($_REQUEST['saldoMas'])){//comprobamos si hemos añadido el saldo o es la primera vez que entramos
            //si hemos añadido saldo calculara el saldo que teniamos + el saldo añadido
             $saldoadd=$_REQUEST['saldoMas']+$_REQUEST['saldo'];
-            echo "saldo total".$saldoadd;
+            echo "<h1 class='saldoTotal'> Saldo total: ".$saldoadd." €</h1>";
             $usu=new usuario();
             $usu->modificarSaldo($_SESSION["usuario"], $saldoadd);//y lo modificaremos en la base de datos gracias a la funcion en cuestión
         }else{//si es la primera vez , crearemos el usuario y mostraremos el formulario con los datos del usuario en cuestion.
