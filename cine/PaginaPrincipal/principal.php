@@ -25,11 +25,11 @@ include("../funciones y objetos/sala.php");
 //creamos un usuario para obtener su nombre en el apartado usuario
 $usu=new usuario();
 echo '<nav>
-<div><a href="./principal.php?menu=verPeli">Ver Películas</a></div>
-<div><a href="./principal.php?menu=verEntradas">Ver Entradas</a></div>
+<div><a href="./principal.php?menu=verPeli">ver Películas</a></div>
+<div><a href="./principal.php?menu=verEntradas">ver Entradas</a></div>
 <div><a href="./principal.php?menu=saldo">Recargar saldo</a></div>
-<div><a href="./principal.php?menu=modUsu">Usuario: '.$usu->darNombre($_SESSION["usuario"]).'</a></div>
-<div><a href="../login , session y registro/cerrar_sesion.php">Salir</a></div>
+<div><a href="./principal.php?menu=modUsu">Usuario :'.$usu->darNombre($_SESSION["usuario"]).'</a></div>
+<div><a href="../login , session y registro/cerrar_sesion.php">salir</a></div>
 </nav>
 ';
 //si puldamos cualquier opcion del menu entraremos en un switch donde dependiendo de la opcion pulsada realizara una funcion u otra.
@@ -144,10 +144,10 @@ if($saldo>$precioEntradas){
 <input type="hidden" name="saldoFinal" value="'.($saldo-$precioEntradas).'">
    <p> <button name="confirPagar" value="si" type="submit" >PAGAR</button> <p>
     </form>
-    <p><a href="./principal.php?menu=verPeli">VOLVER</a></p>';
+    <p><a href="#">VOLVER</a></p>';
 }else{//si el saldo es inferior mostramos mensaje
    echo "<h2>No tiene saldo Suficiente</h2>";
-echo '<p><a href="./principal.php?menu=verPeli">VOLVER</a></p>';   
+echo '<p><a href="./principal.php">VOLVER</a></p>';   
 }}
 
 if(isset($_REQUEST['confirPagar'])){//si confirmamos la compra
