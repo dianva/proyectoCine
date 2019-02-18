@@ -29,11 +29,14 @@
                 <label name= "email">&nbsp;* Email</label>
 				<input name="email" type="text" />
 				</div> 
+				<div class="datos">
+			<input class="loginRegistro" type="submit" name="registro" value="Registrarse" />
+		</div>  
 				<!-- Aqui esta la parte que permite guardar tus datos en fichero o registrarse desde un fichero que queda
 				descartada por temas del diseño
 			
 			<div class="datos">
-			<input class="loginRegistro" type="submit" name="registro" value="Registrarse" /><br/>
+			
 			<input class="loginRegistro" type="submit" name="guardar" value="Guardar datos (dni.txt)"><br/>
 		</div>  
 		<div>
