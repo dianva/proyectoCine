@@ -6,26 +6,27 @@
 	<link rel="stylesheet" href="" type="text/css" />
 	<link rel="stylesheet" href="../css/basico.css" type="text/css" />
 	<link rel="stylesheet" href="../css/registro.css" type="text/css" />
+	<link rel="stylesheet" href="../css/registroColumnas.css" type="text/css" />
 </head>
 <body>
 <h1>Página de registro</h1>
 		<form method="post" action="#" enctype="multipart/form-data">
 		<div class="registro">
 			<div>
-                <label name= "nif">* DNI</label><br>
+                <label name= "nif">* DNI</label>
                 <input name="nif" type="text" />
 	        </div>
 			<div>
-                <label name= "nombre">* Nombre</label><br>
+                <label name= "nombre">* Nombre</label>
                 <input name="nombre" type="text" />
 	        </div>
 			<div>
-                <label name= "pas">* Contraseña</label><br>
+                <label name= "pas">* Contraseña</label>
                 <input name="pas" type="password" />
 	        </div>
 			     
 	        <div>
-                <label name= "email">&nbsp;* Email</label><br>
+                <label name= "email">&nbsp;* Email</label>
 				<input name="email" type="text" />
 				</div> 
 				<!-- Aqui esta la parte que permite guardar tus datos en fichero o registrarse desde un fichero que queda

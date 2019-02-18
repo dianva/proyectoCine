@@ -1,0 +1,8 @@
+div div{
+    display: grid;
+    grid-template-columns: 45% 1fr;
+
+}
+h3{
+    grid-column: 1/3;
+}
