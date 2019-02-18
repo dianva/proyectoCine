@@ -60,7 +60,7 @@ class sala{
 
     public function verButacas($numbutacas, $ocupadas, $sala, $dia, $hora){ 
                  $ocu=false;
-                 echo '<form action="./principal.php" method="post">
+                 echo '<form class="butacas" action="./principal.php" method="post">
                 <h1>PANTALLA</h1>
                  <table><tr>';
 //las butacas se colocaran en una tabla de 10 butacas por fila
