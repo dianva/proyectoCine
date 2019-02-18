@@ -4,10 +4,12 @@
     /*border: dotted black 5px;*/
 }
 
-
+label{
+    font-size: 3vw;
+}
 .formulario{
     margin: auto;
-    font-size: 200%;
+    font-size: 3vw;
     line-height: 200%;
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -30,8 +32,6 @@
 @media(max-width:750px){
     .formulario{
         margin: auto;
-    font-size: 200%;
-    line-height: 200%;
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(0px,1fr));
     grid-column-gap: 0px;
@@ -47,4 +47,9 @@ div>div{
     padding: 5%;
 }
 
+}
+@media(min-width:1650px){
+.formulario{
+    font-size: 50px;
+}
 }

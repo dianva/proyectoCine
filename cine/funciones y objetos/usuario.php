@@ -16,7 +16,7 @@ class usuario
             printf("<h3 style='color:red'>Error al conectar la Base de Datos: %s </h3>", $e->getMessage());
         }
     }
-    //nos muestra un formulario para poder moficar un determinado usuario pasado como parametro
+
     public function formularioMod($dni)
     {
 
@@ -56,8 +56,8 @@ class usuario
 
     }
 
-    public function darNombre($dni){// //devuelve el nombre de la persona a la que conrresponde el dni pasado como parametro
-
+    public function darNombre($dni)
+    {
         $consulta = "select * from usuario where nif like '$dni' ;";
         try {
             $resultados = $this->conex->prepare($consulta);
@@ -73,7 +73,7 @@ class usuario
 
         }
     }
-//devuelve el saldo de la persona que se paso como parametro
+
     public function darSaldo($dni)
     {
         $consulta = "select * from usuario where nif like '$dni' ;";
@@ -91,8 +91,8 @@ class usuario
 
         }
     }
-    public function formuAgregarSaldo($dni){//muestra el formulario para agregar más saldo a una determinada peronsa q ese ha pasado como parametro
-
+    public function formuAgregarSaldo($dni)
+    {
         $consulta = "select * from usuario WHERE nif like '$dni';";
         try {
             $resultados = $this->conex->prepare($consulta);
@@ -100,32 +100,29 @@ class usuario
             $regto = $resultados->fetch(PDO::FETCH_ASSOC);
 
             echo "<div class='fichaUsuario'>
-            <fieldset>
-<legend>DNI    : " . $dni . "</legend>
+<p>DNI    : " . $dni . "</p>
 <p>Nombre : " . $regto['nombre'] . "</p>
 <p>Email  : " . $regto['email'] . "</p>
 <p>Saldo  : " . $regto['saldo'] . "€</p>
-
 <form action='./principal.php' method='post'>
-<h2>Añada saldo a su cuenta</h2>
+<h2>Si desea añadir saldo a su cuenta añádalo desde aquí</h2>
     <p><input type='number' name='saldoMas'></p>
     <input type='hidden' name='saldo' value='" . $regto['saldo'] . "'>
     <input type='hidden' name='menu' value='saldo'>
     <button type='submit'>Añadir Saldo a la cuenta</button>
-    </fieldset>
 </form>
 <div>";
 
         } catch (PDOException $e) {
             echo "<p>Consulta ejecutada: " . $consulta . "</p>";
             echo "<p class='error'>Descripción del error: " . $e->getMessage() . "</p>";
-
+            
         }
 
 
     }
-    public function modificarSaldo($dni, $saldo){//modifica el saldo de la persona pasada como parametro por el saldo que se ha pasado por parametro
-
+    public function modificarSaldo($dni, $saldo)
+    {
         $consulta = "UPDATE usuario SET saldo=$saldo WHERE nif like '$dni';";
         try {
             $resultados = $this->conex->prepare($consulta);
@@ -138,8 +135,8 @@ class usuario
         }
     }
 
-    public function actualizarUsu($dni, $nombre, $email , $pass){//actualizamos el usuario pasando todos sus datos 
-
+    public function actualizarUsu($dni, $nombre, $email, $pass)
+    {
         $consulta = "UPDATE usuario SET nombre='$nombre', email='$email', password='$pass' WHERE nif like '$dni';";
         try {
             $resultados = $this->conex->prepare($consulta);
@@ -152,8 +149,8 @@ class usuario
         }
 
     }
-    public function actualizarUsuSinPass($dni, $nombre, $email ){//moficamos el usuario pasando sus datos excepto el password
-
+    public function actualizarUsuSinPass($dni, $nombre, $email)
+    {
         $consulta = "UPDATE usuario SET nombre='$nombre', email='$email' WHERE nif like '$dni';";
         try {
             $resultados = $this->conex->prepare($consulta);

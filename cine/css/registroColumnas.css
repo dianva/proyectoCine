@@ -6,3 +6,17 @@ div div{
 h3{
     grid-column: 1/3;
 }
+
+@media(max-width:815px){
+    div div{
+        display: grid;
+        grid-template-columns: 1fr;
+    
+    }
+    h3{
+        grid-column: 1/1;
+    }
+    input{
+        width: 60%;
+    }
+}
