@@ -18,6 +18,8 @@ body{
 }
 p{
     text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 a{
     text-decoration: none;
@@ -241,7 +243,6 @@ form > p > input[type='number']{
     }
 
     nav div{        
-        border-bottom: 2px solid black;
         border-right: none;
         margin:0;
        
@@ -251,6 +252,50 @@ form > p > input[type='number']{
         margin:0;
     }
 
+    form.butacas{
+        min-width: 550px;
+    }
 
+}
+
+form.butacas > h1{
+    text-align: center;
+    padding: 10px;
+    color:midnightblue;
+}
+
+form.butacas{
+    border: 5px solid blue;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+form.butacas > table{
+ padding: 20px 0 20px 40px;
+}
+
+input[type="checkbox"]{
+    opacity: 0;
+}
+
+form.butacas td > label > img{
+    border-radius: 50%;
+    border: 1px solid rgb(156, 214, 236);
+}
+
+form.butacas td > img{
+    border-radius: 50%;
+    border: 1px solid rgb(156, 214, 236);
+}
+
+form.butacas > p > button{
+    border-radius: 15px;
+    text-align: center;
+    height: 3em;
+}
+
+h2{
+    text-align: center;
+    color:midnightblue;
 }
 
