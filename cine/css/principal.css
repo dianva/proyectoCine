@@ -12,23 +12,26 @@ body{
     height: 100vh;
 }
 body{
-    background: rgb(156, 214, 236);
+    background:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc6lQGUCeCCPJXwGkNFb-i64cla93tnj6FekEGmMJOTFSXNuX-") no-repeat center center fixed;
+    background-size: cover;
     color: black;
     font-family: Arial, Helvetica, sans-serif;
 }
 p{
     text-align: center;
-    margin-top: 40px;
-    margin-bottom: 40px;
+   
 }
 a{
     text-decoration: none;
-    padding: 1em;
+    /*padding: 1em;*/
     font-size: 1.5em;
     color: midnightblue;
 }
+
+
 div div{
-    background: rgb(88, 199, 233);
+    background:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc6lQGUCeCCPJXwGkNFb-i64cla93tnj6FekEGmMJOTFSXNuX-") no-repeat center center fixed;
+    background-size: cover;
     text-align: center;
     padding: 20px;
     color: white;
@@ -41,7 +44,11 @@ p>a{
     background-color: rgb(218, 67, 67);
     color: white;
     padding: 1em;
-    border-radius: 30px;
+    border-radius: 17px;
+}
+
+#volver{
+    margin:4em auto;
 }
 div:hover{
     transform: scale(1);
@@ -68,7 +75,7 @@ nav div{
 
 nav > div > a:hover{
     color:white;   
-    text-shadow: 2px 2px 80px blue;
+    text-shadow: 2px 2px 40px blue;
     font-weight: bolder;
     transform: scale(1.5);   
     
@@ -101,6 +108,7 @@ img{
 }
 .sala > *{
     padding:20px;
+    color:midnightblue;
 }
 
 #cartelera > div h2{
@@ -110,10 +118,14 @@ img{
         font-size: 1.5em;
         /* right: 50%; */
         /* border: solid red 10px; */
-        font-size: bolder;
-        color: white;
+        font-size: bolder;        
         padding: 1em;
   
+}
+
+.entradasUsuario{
+    display: flex;
+    flex-flow: row wrap;
 }
 
 .entrada{
@@ -123,10 +135,14 @@ img{
     background-size: contain;
     box-shadow: none;
     margin: 0.5em;
+    width:10em;
+
+    
 
 }
 
 .entradasUsuario > h2{
+    flex-basis: 100%;
     text-align: center;
 }
 
@@ -240,17 +256,8 @@ form > p > input[type='number']{
     #cartelera{
         grid-template-columns: minmax(300px, 1fr);
        
-    }
-
-    nav div{        
-        border-right: none;
-        margin:0;
-       
-    }nav > div:nth-child(5){
-        border-bottom: 2px solid black;
-        border-right: none;
-        margin:0;
-    }
+    }  
+    
 
     form.butacas{
         min-width: 550px;
@@ -317,6 +324,11 @@ h2{
      width:20em;
      height: 2em;   
    
+}
+
+form > p{
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 
