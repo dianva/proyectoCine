@@ -275,7 +275,7 @@ form.butacas > table{
 }
 
 input[type="checkbox"]{
-    opacity: 0;
+    display: none;
 }
 
 input[type='checkbox']:checked ~ label > img{
@@ -302,6 +302,21 @@ form.butacas > p > button{
 h2{
     text-align: center;
     color:midnightblue;
+}
+
+.seleccionPase{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.seleccionPase > select{
+     margin:1em;
+     width:20em;
+     height: 2em;   
+   
 }
 
 
