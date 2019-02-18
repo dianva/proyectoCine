@@ -72,6 +72,14 @@ div:hover{
         text-align: center;
     }
 
+
+#error{
+    color: red;
+    font-size: 20px;
+    font-weight: bolder;
+}  
+
     label{
         color:midnightblue;
     }
+

@@ -9,7 +9,7 @@
 
 	<body>
     <h1>ERROR EN EL INICIO DE SESION</h1>
-    <p>Vuelve a intentarlo</p>
+    <p id="error">Vuelve a intentarlo</p>
 		<form method="post" action="comprueba_login.php">
 			<div class="formulario">
 

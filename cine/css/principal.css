@@ -326,6 +326,34 @@ h2{
    
 }
 
+.entradas, #totales{
+    display: grid;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    margin:0 auto 0 auto;
+}
+
+.entradas > p{
+    margin:0 auto 1px auto;
+    box-sizing:border-box;
+    border: 2px solid blue;
+    padding: 1em;
+    border-radius: 10px;
+    color: midnightblue;
+    width: 400px;
+}
+
+.entradas >p:hover{
+    color:white;
+    background-color: rgb(71, 118, 233);
+    transform: scale(1.2); 
+}
+
+.entradas > p:nth-of-type(1){
+    margin-top: 30px;
+}
+
 form > p{
     margin-top: 40px;
     margin-bottom: 40px;
@@ -333,3 +361,27 @@ form > p{
 
 
 
+
+#totales > p{
+    margin:0 auto 1px auto;
+    box-sizing:border-box;
+    border: 2px solid blue;
+    padding: 1em;
+    width: 400px;
+    border-radius: 10px;
+    color: midnightblue;
+    
+}
+
+#totales > p:hover{
+    color:white;
+    background-color: rgb(71, 118, 233);
+    transform: scale(1.2); 
+}
+
+@media (max-width:600px){
+    #totales > p, .entradas > p{
+        min-width: 200px;
+        flex-shrink: 1;
+    }
+}

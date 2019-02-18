@@ -132,7 +132,6 @@ if($saldo>$precioEntradas){
         //y el precio total de las mismas , asi como el saldo final de la cuenta del usuario
     echo "<div id='totales'><p>TOTAL      : ".$precioEntradas."€</p>";
     echo "<p>SALDO      : ".$saldo."€</p>";
-    echo "-----------------------------------------";
     echo "<p>SALDO FINAL: ".($saldo-$precioEntradas)."€</p>";
     echo "</div>";
         //mostramos un boton para confirmar la compra o para cancelarla
