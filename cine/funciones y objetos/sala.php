@@ -89,7 +89,7 @@ class sala{
  echo '</tr></table>
  <input type="hidden" name="dia" value="'.$dia.'">
  <input type="hidden" name="hora" value="'.$hora.'">
- <button type="submit" name="comprarButacas" value="'.$sala.'">Comprar</button>            
+ <p><button type="submit" name="comprarButacas" value="'.$sala.'">Comprar</button></p>            
  </form>
  <p><a href="./principal.php">VOLVER</a></p>
  ';
