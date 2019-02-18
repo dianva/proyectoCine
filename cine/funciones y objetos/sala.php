@@ -79,7 +79,7 @@ class sala{
                 if($ocu){//dependiendo de si está o no ocupada la butaca mostraremos una u otra opción
                         echo '<td><img src="../Carteles/broja.jpg"></td>';
                     }else{//una butaca en azul y un checbox para pdoer comprarla
-                        echo '<td><label for="'.$i.'"><img src="../Carteles/bazul.jpg"></label><input type="checkbox"  name="butacas[]" value="'.$i.'" id="'.$i.'"></td>';
+                        echo '<td><input type="checkbox"  name="butacas[]" value="'.$i.'" id="'.$i.'"><label for="'.$i.'"><img src="../Carteles/bazul.jpg"></label></td>';
 
                     }    
                    
