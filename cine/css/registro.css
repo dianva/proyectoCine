@@ -14,7 +14,7 @@
     display: grid;
     grid-gap: 10px;
     grid-template-columns: 1fr;
-    
+    min-width: 350px;
 }
 .datos{
 display: flex;
@@ -44,4 +44,3 @@ form > div > div:nth-child(6) > input[type='submit']{
 form > div > div:nth-child(6) > label{
     padding:0.5em;
 }
-

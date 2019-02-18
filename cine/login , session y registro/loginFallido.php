@@ -16,10 +16,12 @@
 				<div><label name="nif">NIF</label><input name="nif" type="text" /></div>
 				<div><label name="password">PASS</label><input name="password" type="password" /></div>
                 <div><input  class="loginRegistro" class="login" type="submit" name="login" value="LOGIN" /></div>
-                <div><h3><a class="loginRegistro"  href="passOlvidada.php">¿Contraseña  olvidada?</a></h3><h3><a class="loginRegistro"  href="registro.php">Regístrate aquí</a></h3></div>
-		</form>
+								<div><h3><a class="loginRegistro"  href="passOlvidada.php">¿Contraseña  olvidada?</a></h3>	</div>
+							
+	
 		
-		</div>
+</div>
+</form>
 	</body>
 	
 </html>

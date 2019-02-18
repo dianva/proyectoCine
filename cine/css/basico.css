@@ -19,7 +19,7 @@ a{
 div div{
     background: rgb(88, 199, 233);
     text-align: center;
-    padding: 20px;
+    padding: 2%;
     color: white;
     box-shadow: 2px 2px 80px blue;
     border-radius: 15px;
@@ -68,3 +68,5 @@ div:hover{
         font-size: 3.5em;
         text-align: center;
     }
+
+    

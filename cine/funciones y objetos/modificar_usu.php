@@ -6,8 +6,8 @@ class usuario{
     public function __construct() //funcion que se autoejecuta cuando defines un objeto, le puedes poner argumentos de inicialización, por defecto todo es vacio
     {
       $dns  ='mysql:host=localhost;dbname=cine;charset=utf8';
-      $usuario = 'daw';
-        $password = 'galileo';
+      $usuario = 'root';
+        $password = '';
         try {
           $this->conex = new PDO($dns, $usuario, $password);
           $this->conex->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

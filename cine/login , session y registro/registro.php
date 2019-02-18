@@ -12,23 +12,25 @@
 		<form method="post" action="#" enctype="multipart/form-data">
 		<div class="registro">
 			<div>
-                <label name= "nif">* DNI</label>
+                <label name= "nif">* DNI</label><br>
                 <input name="nif" type="text" />
 	        </div>
 			<div>
-                <label name= "nombre">* Nombre</label>
+                <label name= "nombre">* Nombre</label><br>
                 <input name="nombre" type="text" />
 	        </div>
 			<div>
-                <label name= "pas">* Contraseña</label>
+                <label name= "pas">* Contraseña</label><br>
                 <input name="pas" type="password" />
 	        </div>
 			     
 	        <div>
-                <label name= "email">&nbsp;* Email</label>
+                <label name= "email">&nbsp;* Email</label><br>
 				<input name="email" type="text" />
-				
-			</div> 
+				</div> 
+				<!-- Aqui esta la parte que permite guardar tus datos en fichero o registrarse desde un fichero que queda
+				descartada por temas del diseño
+			
 			<div class="datos">
 			<input class="loginRegistro" type="submit" name="registro" value="Registrarse" /><br/>
 			<input class="loginRegistro" type="submit" name="guardar" value="Guardar datos (dni.txt)"><br/>
@@ -39,7 +41,7 @@
 		<input type="submit" name="cargar" value="OK!">
 		</form>
 		</div>
-           
+			-->
 			<div><h3><a class="loginRegistro"  href="../index.html">Volver al inicio</a></h3></div>
 		</form>	
 		</div>
