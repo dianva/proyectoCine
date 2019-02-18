@@ -100,16 +100,19 @@ class usuario
             $regto = $resultados->fetch(PDO::FETCH_ASSOC);
 
             echo "<div class='fichaUsuario'>
-<p>DNI    : " . $dni . "</p>
+            <fieldset>
+<legend>DNI    : " . $dni . "</legend>
 <p>Nombre : " . $regto['nombre'] . "</p>
 <p>Email  : " . $regto['email'] . "</p>
 <p>Saldo  : " . $regto['saldo'] . "€</p>
+
 <form action='./principal.php' method='post'>
-<h2>Si desea añadir saldo a su cuenta añádalo desde aquí</h2>
+<h2>Añada saldo a su cuenta</h2>
     <p><input type='number' name='saldoMas'></p>
     <input type='hidden' name='saldo' value='" . $regto['saldo'] . "'>
     <input type='hidden' name='menu' value='saldo'>
     <button type='submit'>Añadir Saldo a la cuenta</button>
+    </fieldset>
 </form>
 <div>";
 
