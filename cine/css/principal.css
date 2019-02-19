@@ -284,11 +284,15 @@ form.butacas > table{
 input[type="checkbox"]{
     display: none;
 }
-
+input[type='checkbox']~ label > img{ /*para que no se muevan los asientos al hacer click*/
+    padding:5px;
+}
 input[type='checkbox']:checked ~ label > img{
     border: 5px solid green;
+    padding:0;
     border-radius: 50%;
 }
+
 
 form.butacas td > label > img{
     border-radius: 50%;
@@ -353,13 +357,6 @@ h2{
 .entradas > p:nth-of-type(1){
     margin-top: 30px;
 }
-
-form > p{
-    margin-top: 40px;
-    margin-bottom: 40px;
-}
-
-
 
 
 #totales > p{
